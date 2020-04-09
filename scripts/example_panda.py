@@ -17,8 +17,7 @@ if __name__ == '__main__':
     robot = pb_robot.panda.Panda() 
  
     # Add floor object 
-    objects_path = pb_robot.helper.getDirectory()
-    floor_file = os.path.join(objects_path, 'furniture/short_floor.urdf')
+    floor_file = 'models/short_floor.urdf'
     floor = pb_robot.body.createBody(floor_file)
 
     # Example function on body object
