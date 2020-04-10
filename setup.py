@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-from distutils.core import setup
+from setuptools import setup, find_packages
 from setuptools.command.install import install
 import subprocess
 from catkin_pkg.python_setup import generate_distutils_setup
 import os
 
 d = generate_distutils_setup(
-            packages=['pb_robot'],
+            packages=find_packages('src'),
             package_dir={'': 'src'},
 )
 
