@@ -6,7 +6,7 @@ This is a fork of [Caelan's ss-pybullet](https://github.com/caelan/ss-pybullet) 
 
 The first thing is to install the dependencies:
 ```
-$ pip2 install numpy pybullet recordclassc catkin_pkg IPython
+$ pip2 install numpy pybullet recordclass catkin_pkg IPython
 $ pip2 install git+https://github.com/personalrobotics/tsr.git
 ```
 

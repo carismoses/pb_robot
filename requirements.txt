@@ -1,0 +1,6 @@
+numpy 
+pybullet 
+recordclass 
+catkin_pkg 
+IPython
+tsr @ git+ssh://git@github.com/personalrobotics/tsr.git#egg=tsr'
