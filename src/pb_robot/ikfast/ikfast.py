@@ -11,7 +11,7 @@ import pb_robot.utils_noBase as utils
 import pb_robot.planning as planning
 import pb_robot.helper as helper
 
-from .utils import compute_inverse_kinematics
+from pb_robot.ikfast.utils import compute_inverse_kinematics
 
 INF = np.inf
 
