@@ -241,8 +241,8 @@ def get_model_path(rel_path): # TODO: add to search path
 
 def load_model(rel_path, pose=None, **kwargs):
     # TODO: error with loadURDF when loading MESH visual and CYLINDER collision
-    abs_path = get_model_path(rel_path)
-    add_data_path()
+    abs_path = rel_path#get_model_path(rel_path)
+    #add_data_path()
     #with LockRenderer():
     body = load_pybullet(abs_path, **kwargs)
     if pose is not None:

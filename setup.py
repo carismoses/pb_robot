@@ -21,5 +21,13 @@ class InstallLocalPackage(install):
         subprocess.call(
             "python src/pb_robot/ikfast/franka_panda/setup.py install", shell=True
         )
-        
-setup(install_requires=install_requires, cmdclass={ 'install': InstallLocalPackage }, **d)
+    
+# other files necessary to run package
+package_data = ['models/franka_description/robots/panda_arm_hand.urdf']
+
+# install
+setup(install_requires=install_requires, 
+        cmdclass={ 'install': InstallLocalPackage }, 
+        package_data={'': package_data},
+        include_package_data=True,
+        **d)

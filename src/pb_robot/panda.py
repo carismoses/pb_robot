@@ -1,5 +1,6 @@
 import random
 import time
+import os
 import numpy
 import pybullet as p
 import pb_robot
@@ -11,9 +12,8 @@ class Panda(pb_robot.body.Body):
     '''Create all the functions for controlling the Panda Robot arm'''
     def __init__(self):
         '''Generate the body and establish the other classes'''
-        self.urdf_file = 'models/franka_description/robots/panda_arm_hand.urdf'
-        #self.urdf_file = 'models/franka_description/robots/panda_arm.urdf'
-
+        this_dir, _ = os.path.split(__file__)
+        self.urdf_file = os.path.join(this_dir, "models/franka_description/robots", "panda_arm_hand.urdf")
         with pb_robot.helper.HideOutput(): 
             with utils.LockRenderer():
                 self.id = utils.load_model(self.urdf_file, fixed_base=True)
